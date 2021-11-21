@@ -79,13 +79,12 @@ def menu():
 # opcao 1
 def cadastrar_servicos(vet_cadastrar):
     print('\n... Cadastro dos Tipos de Serviços ...')
-    continuar = 'S'
-    while continuar == 'S':
+    for i in range(4):
         servico = TipoServico()
         servico.codigo_servico = int(input('Cadastre o código do tipo de serviço: '))
         servico.descricao = input('Cadastre a descrição do tipo de serviço: ').ljust(10, ' ').title()
-        continuar = input('Deseja continuar? [s]im ou [n]ão: ').upper()
         vet_cadastrar.append(servico)
+    return vet_cadastrar
 
 # opcao 2
 def exibir_servicos(vet_servicos):
